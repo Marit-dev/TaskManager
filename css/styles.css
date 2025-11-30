@@ -1,0 +1,132 @@
+:root {
+--primary-color: #3498db; 
+--secondary-color: #e74c3c; 
+--accent-color: #f39c12; 
+--bg-color: #ecf0f1; 
+--text-color: #2c3e50; 
+--light-bg: #ffffff; 
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: var(--bg-color);
+padding: 20px;
+color: var(--text-color);
+display: flex; 
+justify-content: center;
+}
+
+.task-manager-container {
+width: 100%;
+max-width: 600px; 
+background: var(--light-bg);
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+text-align: center;
+margin-bottom: 30px;
+font-size: 36px;
+color: var(--primary-color);
+font-weight: 700;
+}
+
+.task-form {
+display: flex;
+gap: 10px;
+margin-bottom: 30px;
+}
+
+.task-input {
+flex-grow: 1; 
+padding: 12px 15px;
+border: 2px solid #bdc3c7;
+border-radius: 8px;
+font-size: 16px;
+transition: border-color 0.3s;
+}
+
+.task-input:focus {
+border-color: var(--primary-color);
+outline: none;
+}
+
+button {
+border: none;
+padding: 10px 18px;
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+transform: translateY(-1px);
+}
+
+.add-button {
+background: var(--primary-color);
+color: white;
+}
+
+.task-content {
+display: flex;
+align-items: center;
+cursor: pointer;
+flex-grow: 1; 
+}
+
+.task-item {
+background: var(--light-bg);
+padding: 15px;
+border-radius: 10px;
+margin-bottom: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-left: 5px solid var(--primary-color); 
+box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); 
+transition: opacity 0.3s, border-color 0.3s;
+}
+
+.task-item.completed {
+opacity: 0.6; 
+border-left-color: #2ecc71; 
+}
+
+.task-item.completed .task-text {
+text-decoration: line-through;
+color: #95a5a6; 
+}
+
+.task-content input[type="checkbox"] {
+margin-right: 15px;
+width: 20px;
+height: 20px;
+cursor: pointer;
+}
+
+.task-text {
+font-size: 18px;
+}
+
+.buttons {
+display: flex;
+gap: 8px; 
+}
+
+.edit-btn, .delete-btn {
+padding: 8px 10px;
+color: white;
+font-size: 14px;
+}
+
+.edit-btn {
+background: var(--accent-color); 
+}
+
+.delete-btn {
+background: var(--secondary-color); 
+}
